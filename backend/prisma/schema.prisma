@@ -1,0 +1,29 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Stock {
+  id         Int    @id @default(autoincrement())
+  nome       String
+  categoria  String
+  fabricante String
+  quantidade Int
+  preco      Float
+
+  Stales Sale[]
+}
+
+model Sale {
+  id                Int      @id @default(autoincrement())
+  produtoId         Int
+  quantidadeVendida Int
+  valorTotal        Float
+  dataVenda         DateTime
+  estoque           Int
+  Produto           Stock    @relation(fields: [produtoId], references: [id])
+}
