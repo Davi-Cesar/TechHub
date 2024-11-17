@@ -34,32 +34,32 @@ Antes de começar, você precisa ter o seguinte instalado:
    ```
 
 2. Navegue até o diretório backend:
-   cd backend
+   `bash cd backend `
 
 3. Instale as dependências do backend:
-   yarn install
+   `bash yarn install `
 
 4. Configure o banco de dados no arquivo .env:
-   DATABASE_URL="mysql://usuario:senha@localhost:3306/techhub"
+   `bash DATABASE_URL="mysql://usuario:senha@localhost:3306/techhub" `
 
 5. Execute as migrations do Prisma para configurar o banco de dados:
-   npx prisma migrate dev
+   `bash npx prisma migrate dev `
 
 6. (Opcional) Execute o seed para popular o banco com dados de exemplo:
-   npx prisma db seed
+   `bash npx prisma db seed `
 
 7. Inicie o servidor de desenvolvimento:
-   yarn start
+   `bash yarn start `
 
 ### **2. Configuração do Frontend**
 
 1. Navegue até o diretório frontend:
-   cd frontend
+   `bash cd frontend `
 
 2. Instale as dependências do frontend:
-   yarn install
+   `bash yarn install `
 
 3. Inicie o servidor de desenvolvimento:
-   yarn start
+   `bash yarn start `
 
 ---
